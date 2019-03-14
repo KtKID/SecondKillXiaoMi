@@ -7,17 +7,18 @@ import threading
 #时钟间隔
 ti=0.001
 #秒杀时间
-buytime="2019-03-10 23:11:59"
+buytime="2019-03-15 00:10:59"
 
 miAccount = 'https://account.xiaomi.com'
 mi9Url = 'https://item.mi.com/product/10000134.html'
+miNote7Url = 'https://item.mi.com/product/10000131.html'
 carUrl='https://item.mi.com/product/8881.html'
 
 #配置账号密码
 name="111"
 pwd="111"
 
-try_count = 5000
+try_count = 1
 
 def star_for_mi9():
     browser= webdriver.Firefox()
@@ -100,5 +101,5 @@ if __name__ == '__main__':
     t1=threading.Thread(target=star_for_mi9)
     t2=threading.Thread(target=star_for_mi9)
     t1.start()
-    t2.start()
+    #t2.start()
 
