@@ -4,6 +4,7 @@ import time
 import datetime
 import threading
 
+
 #时钟间隔
 ti=0.001
 #秒杀时间
