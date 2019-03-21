@@ -26,8 +26,8 @@ def star_for_mi9():
     login(browser)
     success = False
     count = 0
-    #set_mi9_suit(browser)
-    browser.get(carUrl)
+    set_mi9_suit(browser)
+    #browser.get(carUrl)
     time.sleep(2)
     print('已选好mi9配置，等待加入购物车')
     while True :
@@ -52,7 +52,12 @@ def star_for_mi9():
                         success = True
                         break
             else :
-                print('没有购物车按钮', count)
+                try:
+                    login_btn =browser.find_element_by_id("login-button") 
+                    login_btn.click()
+                    print('出现登录按钮', count)
+                except NoSuchElementException :
+                    print('没有购物车和登录按钮', count)
         if success == True :
             print('购买成功')
             break
