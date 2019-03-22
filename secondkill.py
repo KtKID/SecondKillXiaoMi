@@ -53,7 +53,7 @@ def star_for_mi9():
                         break
             else :
                 try:
-                    login_btn =browser.find_element_by_id("login-button") 
+                    login_btn =browser.find_element_by_xpath("//ul[@id='J_buyBtnBox']/li[1]") 
                     login_btn.click()
                     print('出现登录按钮', count)
                 except NoSuchElementException :
